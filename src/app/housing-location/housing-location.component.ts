@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Housinglocation } from './../housinglocation';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from "@angular/common";
 
 @Component({
   selector: 'app-housing-location',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   template: `
     <p>
       housing-location works!
@@ -12,4 +14,5 @@ import { Component } from '@angular/core';
   styleUrl: './housing-location.component.scss'
 })
 export class HousingLocationComponent {
+  @Input() housingLocation! : Housinglocation;
 }
